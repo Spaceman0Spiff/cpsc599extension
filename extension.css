@@ -1,19 +1,20 @@
 /*
-    On my PC 493 pushes related videos exactly to the videos title card
+    On my PC 499 pushes related videos exactly to the videos title card
     This can probably be changed in code for different computers
 */
 .comment-container {
  
-    height: 493px; 
-        
+    height: 499px; 
+    overflow: auto;    
 }
 
 .comment-header {
     
     padding-top: 3px;
+    padding-bottom: 5px;
     color: #666;
     font-size: 13px;
     text-transform: uppercase;
-    
+    border-bottom: 1px solid #999;
     
 }
