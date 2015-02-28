@@ -1,0 +1,19 @@
+/*
+    On my PC 493 pushes related videos exactly to the videos title card
+    This can probably be changed in code for different computers
+*/
+.comment-container {
+ 
+    height: 493px; 
+        
+}
+
+.comment-header {
+    
+    padding-top: 3px;
+    color: #666;
+    font-size: 13px;
+    text-transform: uppercase;
+    
+    
+}
