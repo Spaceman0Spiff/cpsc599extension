@@ -4,7 +4,8 @@
 */
 .comment-container {
  
-    height: 499px; 
+    height: 488px; 
+    margin-bottom: 10px;
     overflow: auto;    
 }
 
@@ -16,5 +17,4 @@
     font-size: 13px;
     text-transform: uppercase;
     border-bottom: 1px solid #999;
-    
 }

@@ -12,7 +12,7 @@ $(document).ready(function() {
 		});
 		function auto_refresh(){
 			var randomnumber = Math.floor(Math.random() * 100);
-			var comment = $('#comment-container').prepend('<div id="'+i+'" class="watch-sidebar-gutter   yt-card yt-card-has-padding    yt-uix-expander yt-uix-expander-collapsed">Test ' + randomnumber + '</div>'); //inserts a comment every second
+			var comment = $('#comment-container').prepend('<div id="'+i+'" class="watch-sidebar-gutter   yt-card yt-card-has-padding    yt-uix-expander yt-uix-expander-collapsed">Test ' + randomnumber + '<br/>2nd line</div>'); //inserts a comment every second
             i++;
             setTimeout(function (){
                // $( 'div#' + j ).remove(); //deletes that comment 7 seconds later
