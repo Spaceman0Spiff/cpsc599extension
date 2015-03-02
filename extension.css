@@ -18,3 +18,23 @@
     text-transform: uppercase;
     border-bottom: 1px solid #999;
 }
+
+.comment-body {
+    
+    color: #333;
+    padding-top: 10px;
+    
+}
+
+.comment-author {
+    
+    color: #333;
+    font-weight: 600;
+    
+}
+
+.comment-time {
+    
+    color: #999;
+    
+}
