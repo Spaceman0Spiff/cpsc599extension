@@ -29,8 +29,14 @@ var refreshId = setInterval(auto_refresh, 1000);
 
 function addComment(author, content, time){
 
+    var comment = '<div id="'+i+'" class="' + divClass + '"><p><span class="comment-author">' + author + '</span><span class="comment-time"> at ' + time + '</span></p><p class="comment-body">' + content + '</p></div>';
+    
+    $(comment).prependTo('#comment-container').hide().slideDown(1000, 'linear');
+    
+    /*
     var comment = $('#comment-container').prepend('<div id="'+i+'" class="' + divClass + '"><p><span class="comment-author">' + author + '</span><span class="comment-time"> at ' + time + '</span></p><p class="comment-body">' + content + '</p></div>'); //inserts a comment every second
     i++;
+    */
 
 }
 
