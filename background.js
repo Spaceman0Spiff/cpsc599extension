@@ -19,8 +19,9 @@ function auto_refresh(){
     
     
     var comment = JSON.parse(JSON.stringify(yt));
+   
     
-    addComment(comment[k]["author"], comment[k]["comment"], "3:27");
+    addComment(comment[k]["author"], comment[k]["comment"].slice(0, -3), "3:27");
     k++;
     /*
     var comment = $('#comment-container').prepend('<div id="'+i+'" class="watch-sidebar-gutter   yt-card yt-card-has-padding    yt-uix-expander yt-uix-expander-collapsed">Test ' + randomnumber + '<br/>2nd line</div>'); //inserts a comment every second
