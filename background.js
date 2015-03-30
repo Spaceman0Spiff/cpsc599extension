@@ -21,7 +21,7 @@ function auto_refresh(){
     var comment = JSON.parse(JSON.stringify(yt));
    
     
-    addComment(comment[k]["author"], comment[k]["comment"].slice(0, -3), "3:27");
+    addComment(comment[k]["author"], comment[k]["comment"].slice(0, -3), toTimestamp(143));
     k++;
     /*
     var comment = $('#comment-container').prepend('<div id="'+i+'" class="watch-sidebar-gutter   yt-card yt-card-has-padding    yt-uix-expander yt-uix-expander-collapsed">Test ' + randomnumber + '<br/>2nd line</div>'); //inserts a comment every second
@@ -37,7 +37,7 @@ var refreshId = setInterval(auto_refresh, 1000);
 
 function addComment(author, content, time){
 
-    var comment = '<div id="'+i+'" class="' + divClass + '"><p><span class="comment-author">' + author + '</span><span class="comment-time"> at ' + time + '</span></p><p class="comment-body">' + content + '</p></div>';
+    var comment = '<div id="'+i+'" class="' + divClass + '"><p><span class="comment-author">' + author + '</span><span class="comment-time">' + time + '</span></p><p class="comment-body">' + content + '</p></div>';
     
     $(comment).prependTo('#comment-container').hide().slideDown(1000, 'linear');
     
@@ -48,7 +48,12 @@ function addComment(author, content, time){
 
 }
 
-
+function toTimestamp(time)
+{
+    if (time == null)
+        return "";
+    return " at " + Math.floor(time / 60).toString() + ":" +  ("0" + (time % 60)).slice(-2).toString();
+}
 
 
 
