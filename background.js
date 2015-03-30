@@ -21,7 +21,7 @@ function auto_refresh(){
     var comment = JSON.parse(JSON.stringify(yt));
    
     
-    addComment(comment[k]["author"], comment[k]["comment"].slice(0, -3), toTimestamp(143));
+    addComment(comment[k]["author"], comment[k]["comment"].slice(0, -3), toTimestamp(getRandomInt(0,600)));
     k++;
     /*
     var comment = $('#comment-container').prepend('<div id="'+i+'" class="watch-sidebar-gutter   yt-card yt-card-has-padding    yt-uix-expander yt-uix-expander-collapsed">Test ' + randomnumber + '<br/>2nd line</div>'); //inserts a comment every second
@@ -55,7 +55,9 @@ function toTimestamp(time)
     return " at " + Math.floor(time / 60).toString() + ":" +  ("0" + (time % 60)).slice(-2).toString();
 }
 
-
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
 
 
