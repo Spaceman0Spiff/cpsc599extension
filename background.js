@@ -40,8 +40,11 @@ function auto_refresh(){
     {
         addComment(withTimestamp[tsCounter]["author"], withTimestamp[tsCounter]["comment"].slice(0, -3), toTimestamp(parseInt(withTimestamp[tsCounter]["timestamp"])));
         if(parseInt(withTimestamp[tsCounter]["timestamp"]) == parseInt(withTimestamp[nextCounter]["timestamp"])) {
+            setTimeout(function(){
             addComment(withTimestamp[nextCounter]["author"], withTimestamp[nextCounter]["comment"].slice(0, -3), toTimestamp(parseInt(withTimestamp[nextCounter]["timestamp"])));
-        tsCounter++;
+            tsCounter++;
+            }, 700);
+            
         }
         
         
