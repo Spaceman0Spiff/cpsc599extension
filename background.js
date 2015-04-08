@@ -1,6 +1,9 @@
 //http://crunchify.com/how-to-refresh-div-content-without-reloading-page-using-jquery-and-ajax/
 //http://stackoverflow.com/questions/4162749/convert-js-object-to-json-string
 
+//video
+//  https://www.youtube.com/watch?v=hhoQqN9oUpo
+
 var i = 1;
 var j = 1;
 var k = 0;
@@ -8,6 +11,7 @@ var k = 0;
 var seconds = 0;
 var tsCounter = 0;
 var noCounter = 0;
+var nextCounter;
 
 var comments = parseComments();
 
@@ -21,15 +25,26 @@ $('#watch7-sidebar').prepend('<div id="comment-container" class="watch-sidebar c
 $('#comment-container').before('<div id="comment-header"><p class="comment-header"><strong>Comments</strong></p></div>');
 
 $(document).ready(function() {
-			auto_refresh();
+    
+            
+            auto_refresh();
+            
 		});
 function auto_refresh(){
     
     //addComment(comments[k]["author"], comments[k]["comment"].slice(0, -3), toTimestamp(getRandomInt(0,600)));
     
+    nextCounter = tsCounter + 1;
+    
     if (seconds >= parseInt(withTimestamp[tsCounter]["timestamp"]) )
     {
         addComment(withTimestamp[tsCounter]["author"], withTimestamp[tsCounter]["comment"].slice(0, -3), toTimestamp(parseInt(withTimestamp[tsCounter]["timestamp"])));
+        if(parseInt(withTimestamp[tsCounter]["timestamp"]) == parseInt(withTimestamp[nextCounter]["timestamp"])) {
+            addComment(withTimestamp[nextCounter]["author"], withTimestamp[nextCounter]["comment"].slice(0, -3), toTimestamp(parseInt(withTimestamp[nextCounter]["timestamp"])));
+        tsCounter++;
+        }
+        
+        
         tsCounter++;
         
     }
