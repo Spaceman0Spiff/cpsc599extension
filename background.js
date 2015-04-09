@@ -1,5 +1,8 @@
+//http://carl-topham.com/theblog/post/creating-chrome-extension-uses-jquery-manipulate-dom-page/
 //http://crunchify.com/how-to-refresh-div-content-without-reloading-page-using-jquery-and-ajax/
 //http://stackoverflow.com/questions/4162749/convert-js-object-to-json-string
+//http://stackoverflow.com/questions/10865789/embedding-images-into-a-chrome-extension
+//http://stackoverflow.com/questions/10865789/embedding-images-into-a-chrome-extension
 
 //video
 //  https://www.youtube.com/watch?v=hhoQqN9oUpo
