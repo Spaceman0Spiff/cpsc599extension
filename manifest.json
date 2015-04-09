@@ -1,17 +1,15 @@
 {
-  "name": "jQuery DOM",
+  "name": "Real-Time YouTube Comments",
   "manifest_version": 2,
   "version": "1.0",
-  "description": "Manipulate the DOM when the page is done loading",
+  "description": "Displays timestamped comments at the indicated time",
   "browser_action": {
-    "name": "Manipulate DOM",
-    "icons": ["icon.png"],
-    "default_icon": "icon.png"
+    "name": "Real-Time YouTube Comments"
   },
   "content_scripts": [ {
     "css": [ "extension.css" ],
     "js": [ "jquery-2.1.3.js", "background.js" ],
-    "matches": [ "http://*/*", "https://*/*"]
+    "matches": [ "https://www.youtube.com/watch?v=hhoQqN9oUpo*", "http://www.youtube.com/watch?v=hhoQqN9oUpo*"]
   }],
     "web_accessible_resources": ["frequency.png"]
 }
