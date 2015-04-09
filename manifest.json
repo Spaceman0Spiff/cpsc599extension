@@ -12,5 +12,6 @@
     "css": [ "extension.css" ],
     "js": [ "jquery-2.1.3.js", "background.js" ],
     "matches": [ "http://*/*", "https://*/*"]
-  }]
+  }],
+    "web_accessible_resources": ["frequency.png"]
 }

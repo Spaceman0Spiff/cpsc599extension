@@ -18,9 +18,13 @@ var comments = parseComments();
 var noTimestamp = noTimestamps();
 var withTimestamp = withTimestamps();
 
+var image = document.createElement("img");
+image.src = chrome.extension.getURL("frequency.png");
+
 var divClass = "watch-sidebar-gutter   yt-card yt-card-has-padding    yt-uix-expander yt-uix-expander-collapsed";
 
 // adds container and header
+$('#watch7-content').prepend('<img id="frequency" class="freqImage" src="'+image.src+'"/>');
 $('#watch7-sidebar').prepend('<div id="comment-container" class="watch-sidebar comment-container"></div>');
 $('#comment-container').before('<div id="comment-header"><p class="comment-header"><strong>Comments</strong></p></div>');
 
