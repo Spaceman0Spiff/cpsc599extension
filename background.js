@@ -76,6 +76,8 @@ function addComment(author, content, time){
 
 }
 
+
+// http://stackoverflow.com/questions/12230343/how-can-i-display-time-with-leading-zeros
 function toTimestamp(time)
 {
     if (time == null)
