@@ -3,6 +3,7 @@
 //http://stackoverflow.com/questions/4162749/convert-js-object-to-json-string
 //http://stackoverflow.com/questions/10865789/embedding-images-into-a-chrome-extension
 //http://stackoverflow.com/questions/10865789/embedding-images-into-a-chrome-extension
+//https://developer.chrome.com/extensions/getstarted
 
 //video
 //  https://www.youtube.com/watch?v=hhoQqN9oUpo
